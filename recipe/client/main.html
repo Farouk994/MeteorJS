@@ -1,0 +1,37 @@
+<head>
+  <title>recipe</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+  {{> newTemplate}}
+  {{> hello}}
+  {{> collection}}
+</body>
+
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<template name="newTemplate">
+  <div>
+    <h2>New Template</h2>
+    <p>list the template that you want to be downloading</p>
+    <ul>
+      <li>Info</li>
+      <li>hello</li>
+    </ul>
+  </div>
+</template>
+
+<template name="collection">
+  <div>
+     <p>Below is the collection of bags that are sold here</p>
+     {{#each designer}}
+     <ul>
+       <li>{{name}}</li>
+     </ul>
+     {{/each}}
+  </div>
+</template>
