@@ -23,21 +23,29 @@ Template.hello.events({
 
 if(Meteor.isClient){
   console.log("this is client")
-  const bags = [
+  const foodProgramme = [
     {
-      name: "louis Vuitton",
+      name: "fish",
       price: 900,
+      image: "fish.jpg"
     },
     {
-      name: "Gucci",
+      name: "meat",
       price: 890,
+      image: "meat.jpg"
     },
     {
-      name: "Prada",
+      name: "beas",
       price: 350,
+      image:"beans.jpg"
     }
   ];
-  Template.collection.helpers({designer: bags});
+  Template.collection.helpers({meal: foodProgramme});
+  Template.collection.events({
+    'click .js-image': function(event){
+      $(event.target).css("width","125px")
+    }
+  })
 }
 
 if(Meteor.isServer){

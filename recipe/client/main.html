@@ -4,7 +4,6 @@
 
 <body>
   <h1>Welcome to Meteor!</h1>
-  {{> newTemplate}}
   {{> hello}}
   {{> collection}}
 </body>
@@ -14,24 +13,21 @@
   <p>You've pressed the button {{counter}} times.</p>
 </template>
 
-<template name="newTemplate">
-  <div>
-    <h2>New Template</h2>
-    <p>list the template that you want to be downloading</p>
-    <ul>
-      <li>Info</li>
-      <li>hello</li>
-    </ul>
-  </div>
-</template>
-
 <template name="collection">
-  <div>
-     <p>Below is the collection of bags that are sold here</p>
-     {{#each designer}}
-     <ul>
-       <li>{{name}}</li>
-     </ul>
-     {{/each}}
+  <div class="row">
+    {{#each meal}}
+    <div class="col-xs-12 col-md-3">
+      <div class="thumbnail">
+  
+         <img class="js-image js-image" src="{{image}}" 
+        alt="{{img_alt}}"/> 
+          
+        <div class="caption">
+            <h3>{{name}}</h3>
+            <p>{{price}}</p>
+         </div>
+       </div>
+      </div> <!-- / col -->
+    {{/each}}
   </div>
 </template>
