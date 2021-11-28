@@ -47,7 +47,3 @@ if(Meteor.isClient){
     }
   })
 }
-
-if(Meteor.isServer){
-  console.log("i am server")
-}
