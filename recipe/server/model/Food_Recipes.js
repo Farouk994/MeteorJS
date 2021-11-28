@@ -1,0 +1,1 @@
+// const FoodTypes = new Mongo.Collection("")
